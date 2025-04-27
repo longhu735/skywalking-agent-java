@@ -49,8 +49,10 @@ public class SkyWalkingContext {
     @Override
     public String toString() {
         if (-1 == spanId) {
-            return "[" + String.join(",", serviceName, instanceName, "N/A", "N/A", "-1") + "]";
+//            return "[" + String.join(",", serviceName, instanceName, "N/A", "N/A", "-1") + "]";
+            return "[serviceName：" + serviceName + ",traceId:N/A,traceSegmentId:N/A,spanId:-1]";
         }
-        return "[" + String.join(",", serviceName, instanceName, traceId, traceSegmentId, String.valueOf(spanId)) + "]";
+//        return "[" + String.join(",", serviceName, instanceName, traceId, traceSegmentId, String.valueOf(spanId)) + "]";
+        return "[serviceName：" + serviceName + ",traceId:" + traceId + ",traceSegmentId:" + traceSegmentId + ",spanId:" + spanId + "]";
     }
 }
